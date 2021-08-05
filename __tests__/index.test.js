@@ -5,6 +5,8 @@ const intToRomanNumeral = require("../index");
 //     expect(1+1).toBe(2);
 // })
 
+// Solve for happy path then handle edge cases 
+
 test("Accept int 1 and output roman numeral I", () => {
     // Arrange
     // Act
@@ -21,12 +23,21 @@ test("Accept string dog and output exception", () => {
     // Act
     // Acert
 
-    const actual = intToRomanNumeral(1);
-
     const lambda = () => {
         intToRomanNumeral("dog")
     };
 
     // Expectation
     expect(lambda).toThrow(Error);
+})
+
+test("Accept int 2 and output roman numeral II", () => {
+    // Arrange
+    // Act
+    // Acert
+
+    const actual = intToRomanNumeral(2);
+
+    // Expectation
+    expect(actual).toBe("II");
 })
